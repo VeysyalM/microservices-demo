@@ -1,0 +1,17 @@
+spring:
+	port: 8083
+  
+  
+ spring:
+ 	application:
+ 	 name:API GATEWAY
+ 	 
+ 	  
+
+  	cloud:
+  		gateway:
+      		routes:
+      			- id: PRODUCT-SERVICE
+        			uri: http:localhost:8888
+        			predicates:
+        			- PATH=/api/product/
